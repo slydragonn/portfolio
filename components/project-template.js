@@ -1,8 +1,8 @@
-import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Heading, Image, Link, Text } from '@chakra-ui/react'
+import { ImGithub } from 'react-icons/im'
 import ArticleStack from './article-stack'
 
-const ProjectTemplate = ({ image, summary, title, stack}) => {
+const ProjectTemplate = ({ image, summary, title, stack, link}) => {
   return (
     <>
       <Image src={image} alt={title} borderRadius="15px" />
@@ -13,8 +13,8 @@ const ProjectTemplate = ({ image, summary, title, stack}) => {
           Technologies
         </Heading>
         <ArticleStack stack={stack} />
-        <Link href="/" isExternal>
-          {title} <ExternalLinkIcon />
+        <Link href={link} isExternal>
+          <ImGithub />
         </Link>
     </>
   )

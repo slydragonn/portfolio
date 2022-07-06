@@ -11,7 +11,7 @@ import {
   ReactSvg,
   SassSvg,
   TypeScriptSvg
-} from './svg/list-svg'
+} from './list-svg'
 
 const skills = [
   'JavaScript',

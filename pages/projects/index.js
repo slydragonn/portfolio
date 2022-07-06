@@ -11,33 +11,13 @@ const Projects = () => {
       <PageLayout title="Projects">
         <GridLayout>
           <Article
-            img="/img/mac.jpg"
-            alt="prueba"
-            title="Prueba Articulo"
-            text="Esto es un prueba de un articulo"
-            tech={['javascript', 'react', 'sass']}
-            link="/projects/hello"
-            extLink="/"
-            as={GridItem}
-          />
-          <Article
-            img="/img/mac.jpg"
-            alt="prueba"
-            title="Prueba Articulo"
-            text="Esto es un prueba de un articulo"
-            tech={['javascript', 'react', 'sass']}
-            link="/"
-            extLink="/"
-            as={GridItem}
-          />
-          <Article
-            img="/img/mac.jpg"
-            alt="prueba"
-            title="Prueba Articulo"
-            text="Esto es un prueba de un articulo"
-            tech={['javascript', 'react', 'sass']}
-            link="/"
-            extLink="/"
+            img="/assets/mark-editor.png"
+            alt="mark editor"
+            title="Simple Markdown Editor"
+            text="Trabaja con codemirror y marked para convertir código de Markdon a HTML"
+            tech={['TypeScript', 'NextJS', 'Codemirror']}
+            link="/projects/mark-editor"
+            extLink="https://mark-editor.vercel.app/"
             as={GridItem}
           />
         </GridLayout>

@@ -14,15 +14,15 @@ import { LinkItem } from '../header/navbar'
 
 const Article = ({ img, alt, title, text, tech, link, extLink, ...props }) => {
   return (
-    <Box {...props} w="100%">
+    <Box {...props} w="100%" textAlign='center'>
       <Image src={img} alt={alt} borderRadius="15px" />
       <Box>
         <LinkItem href={link}>
-          <Heading as="h3" size="sm">
+          <Heading as="h3" size="sm" mt='5px'>
             {title}
           </Heading>
         </LinkItem>
-        <Text>{text}</Text>
+        <Text mt='10px'>{text}</Text>
         <Box as="section">
           {tech.map(skill => (
             <Badge key={skill} size="md" colorScheme="teal" mr="5px">

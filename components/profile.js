@@ -13,6 +13,7 @@ const Profile = () => {
       <Text mb="15px">Hi, I&apos;m a Front End Developer</Text>
       <Box
         w="100%"
+        h='110px'
         display="flex"
         flexDirection={{ base: 'column', sm: 'row' }}
         alignItems="center"

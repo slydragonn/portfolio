@@ -6,7 +6,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Chakra cookies={pageProps.cookies}>
       <Main>
-        <AnimatePresence exitBeforeEnter initial={false}>
+        <AnimatePresence exitBeforeEnter={true} initial={true}>
           <Component {...pageProps} />
         </AnimatePresence>
       </Main>

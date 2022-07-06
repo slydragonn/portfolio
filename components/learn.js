@@ -1,5 +1,5 @@
-import {Box, Heading, Stack, useColorModeValue} from '@chakra-ui/react'
-import {PostgreSQLSvg, PythonSvg} from './svg/list-svg'
+import { Box, Heading, Stack, useColorModeValue } from '@chakra-ui/react'
+import { PostgreSQLSvg, PythonSvg } from './list-svg'
 
 const Learn = () => {
   const skills = ['Python', 'PostgreSQL']

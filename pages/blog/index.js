@@ -8,17 +8,10 @@ const Blog = () => {
       <PageLayout title="Posts">
         <GridLayout>
           <Post
-            img="/img/mac.jpg"
-            alt="prueba post blog"
-            title="Esto es una prueba de un post"
-            link="/"
-            as={GridItem}
-          />
-          <Post
-            img="/img/mac.jpg"
-            alt="prueba post blog"
-            title="Esto es una prueba de un post"
-            link="/"
+            img="/assets/blog-javascript.jpg"
+            alt="JavaScript"
+            title="JavaScript puro y proyectos a gran escala."
+            link="https://medium.com/@slydragonn"
             as={GridItem}
           />
         </GridLayout>

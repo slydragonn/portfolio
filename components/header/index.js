@@ -1,5 +1,5 @@
 import { Box, Heading, useColorModeValue } from '@chakra-ui/react'
-import { DragonSvg } from '../svg/list-svg'
+import { DragonSvg } from '../list-svg'
 import Navbar from './navbar'
 
 const Header = () => {

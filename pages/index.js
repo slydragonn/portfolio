@@ -1,5 +1,4 @@
 import { Box, Container, Divider } from '@chakra-ui/react'
-import MouseMove from '../components/events/mouse-move'
 import Info from '../components/info'
 import Layout from '../components/layouts/layout'
 
@@ -17,9 +16,7 @@ const Home = () => {
         <Divider w="70%" />
         <Box as="section" mt="40px" w="80%">
           <Container maxW="550px">
-            <MouseMove>
               <Info />
-            </MouseMove>
           </Container>
         </Box>
       </Box>
