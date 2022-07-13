@@ -12,11 +12,11 @@ const Projects = () => {
         <GridLayout>
           <Article
             img="/assets/mark-editor.png"
-            alt="mark editor"
+            alt="mark writer"
             title="Simple Markdown Editor"
-            text="Trabaja con codemirror y marked para convertir código de Markdon a HTML"
+            text="Trabaja con codemirror y marked para convertir código de Markdown a HTML"
             tech={['TypeScript', 'NextJS', 'Codemirror']}
-            link="/projects/mark-editor"
+            link="/projects/mark-writer"
             extLink="https://mark-editor.vercel.app/"
             as={GridItem}
           />
