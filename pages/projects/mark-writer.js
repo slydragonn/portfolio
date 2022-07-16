@@ -7,7 +7,7 @@ const Hello = () => {
     <Layout>
       <PageLayout title="Mark Writer">
         <ProjectTemplate
-          image='/assets/mark-editor.png'
+          image='/assets/editor.png'
           summary='Mark Writer es un simple y sencillo Editor Web de Markdown,
            con el cual puedes visualizar ccódigo Markdown a HTML, ademas puedes copiar el código Markdown y HTML
             o exportarlos a sus respectivos archivos.'

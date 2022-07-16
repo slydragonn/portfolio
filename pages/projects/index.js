@@ -11,7 +11,7 @@ const Projects = () => {
       <PageLayout title="Projects">
         <GridLayout>
           <Article
-            img="/assets/mark-editor.png"
+            img="/assets/markwriter.jpg"
             alt="mark writer"
             title="Simple Markdown Editor"
             text="Trabaja con codemirror y marked para convertir código de Markdown a HTML"
