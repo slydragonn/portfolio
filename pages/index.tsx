@@ -1,10 +1,11 @@
+import { NextPage } from 'next'
 import Head from 'next/head'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Alejandro's Portfolio</title>
+        <title>Alejandro&apos;s Portfolio</title>
         <meta name="description" content="Alejandro's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -14,3 +15,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
