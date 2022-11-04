@@ -1,1 +1,5 @@
 export { default as Navbar } from './Navbar'
+export { default as LinkItem } from './LinkItem'
+export { MainLayout, ContentLayout } from './layouts'
+export { default as SocialNetworks } from './SocialNetworks'
+export { default as Footer } from './Footer'
