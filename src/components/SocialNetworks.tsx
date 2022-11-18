@@ -3,7 +3,7 @@ import LinkItem from './LinkItem'
 
 const SocialNetworks = () => {
   return (
-    <ul className='flex w-52 justify-between items-center text-white'>
+    <ul className='flex w-52 justify-between items-center text-[#1e1e1e]'>
       <li><LinkItem href='https://www.youtube.com/@slydragonn' isExternal={true}><SiYoutube /></LinkItem></li>
       <li><LinkItem href='https://twitter.com/slydragonn' isExternal={true}><SiTwitter /></LinkItem></li>
       <li><LinkItem href='https://www.linkedin.com/in/alejolg/' isExternal={true}><SiLinkedin /></LinkItem></li>

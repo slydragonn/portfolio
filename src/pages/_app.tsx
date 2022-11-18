@@ -1,14 +1,15 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { MainLayout, Navbar, ContentLayout } from 'components'
+import { MainLayout, Navbar, Footer } from 'components'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MainLayout>
+    <div className='font-raleway'>
       <Navbar />
-      <ContentLayout>
-        <Component {...pageProps} />
-      </ContentLayout>
-    </MainLayout>
+      <MainLayout>
+          <Component {...pageProps} />
+      </MainLayout>
+      <Footer />
+    </div>
   )
 }

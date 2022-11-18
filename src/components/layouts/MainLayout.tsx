@@ -6,11 +6,13 @@ interface MainLayoutProps {
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className='max-w-[1440px]'>
-      {
-        children
-      }
-    </div>
+    <main className='flex justify-center w-full'>
+        <div className='w-[768px] mt-[50px]'>
+        {
+          children
+        }
+      </div>
+    </main>
   )
 }
 

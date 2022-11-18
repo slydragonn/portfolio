@@ -1,9 +1,7 @@
-import Footer from 'components/Footer'
-import LinkItem from 'components/LinkItem'
+import { Button, LinkItem, SocialNetworks, Tag, Title, Image, Card } from 'components'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import { HomeCard } from 'styledComponents'
-import { COLORS } from 'utils'
+import NextImage from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -14,38 +12,29 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='relative flex flex-col items-center'>
-        <section style={{minHeight: 'calc(100vh - 48px)'}} className='flex flex-col items-center justify-between'>
-          <h1 className='flex flex-col text-4xl sm:text-6xl md:text-7xl text-white font-black text-center select-none transition-all'>
-            <p className='text-xl sm:text-4xl italic font-thin mt-4 sm:mt-6 md:mt-16 font-serif'>Alejandro Londoño</p>
-            <span className='uppercase'>Front-End Developer</span>
-          </h1>
-          <section className='flex flex-col lg:flex-row rounded-[10px] overflow-hidden my-10 lg:my-0'>
-            <LinkItem href='/about'>
-              <HomeCard color={COLORS.red}>
-                <p>Hi!, I&apos;m Front-End Developer</p>
-                <h2 className='self-end font-black text-4xl opacity-40'>about</h2>
-              </HomeCard>
-            </LinkItem>
+        <section style={{height: 'calc(100vh - 50px)'}} className='flex flex-col items-center justify-center px-3'>
+          <Title>Alejandro Londoño</Title>
+          <p className='uppercase font-thin text-base sm:text-xl md:text-2xl mb-2 text-[#1e1e1e] text-center'>Front-End Developer</p>
+          <SocialNetworks />
+          <p className='max-w-lg text-center font-extralight my-5 text-[#1e1e1e]'>Hi I&apos;m a Front-End Developer from Medellín, Colombia. I specialize in front-end apps with JavaScript and React.</p>
+          <Button>
             <LinkItem href='/work'>
-              <HomeCard color={COLORS.yellow}>
-                <p>Did you see my projects?</p>
-                <h2 className='self-end font-black text-4xl opacity-40'>work</h2>
-              </HomeCard>
+              MY PORTFOLIO
             </LinkItem>
-            <LinkItem href='/blog'>
-              <HomeCard color={COLORS.green_100}>
-                <p>Latest programming articles</p>
-                <h2 className='self-end font-black text-4xl opacity-40'>blog</h2>
-              </HomeCard>
-            </LinkItem>
-            <LinkItem href='/about'>
-              <HomeCard color={COLORS.green_200}>
-                <p>How to know more about me</p>
-                <h2 className='self-end font-black text-4xl opacity-40'>contact</h2>
-              </HomeCard>
-            </LinkItem>
-          </section>
-          <Footer />
+          </Button>
+        </section>
+        <section className='flex flex-col md:flex-row justify-around items-center w-full h-[750px] md:h-auto mb-20 px-3'>
+          <Card image='/assets/work/youtube-min.png' title='Link in Bio page' tags={['html', 'css']} link='https://www.youtube.com/@slydragonn'/>
+          <Card image='/short.webp' title='CSS Text Gradient' tags={['html', 'css']} link='https://www.youtube.com/@slydragonn'/>
+        </section>
+        <section className='flex flex-col items-center mb-20 p-3'>
+          <Image
+            src='/alejo.png'
+            alt='Alejandro Londoño Picture'
+            style={{width: '250px', height: '250px', borderRadius: '5px', marginBottom: '20px'}}
+          />
+          <Tag width='auto'>Hi! I&apos;m a Front-End Developer and Content Creador</Tag>
+          <p className='max-w-lg font-light text-center mt-10'>I&apos;m an Indie Front-End Developer from Medellin, Colombia. I like to experiment with all kinds of things, especially programming and I love building new apps and digital experiences. All code is essential, and attention to detail makes a project more than just a job, in my projects I focus on quality rather than quantity, and not only the code but also its entire life cycle.</p>
         </section>
       </main>
     </div>
