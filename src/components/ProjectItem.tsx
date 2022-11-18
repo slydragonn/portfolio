@@ -1,8 +1,8 @@
-import Image from "next/image"
+import Image from 'next/image'
 import { Button, LinkItem, Tag } from 'components'
 
 type Image = {
-  url: string,
+  url: string
   alt: string
 }
 
@@ -21,7 +21,12 @@ const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
         alt={image.alt}
         width={500}
         height={500}
-        style={{width: '350px', height: '200px', borderRadius: '5px', border: '3px solid #1e1e1e'}}
+        style={{
+          width: '350px',
+          height: '200px',
+          borderRadius: '5px',
+          border: '3px solid #1e1e1e'
+        }}
       />
       <div className="flex flex-col justify-between items-center md:items-start w-full sm:w-[350px] h-[200px] mt-4 md:mt-0">
         <Tag width="100%">{title}</Tag>

@@ -1,5 +1,5 @@
-import { CSSProperties } from "styled-components"
-import NextImage from "next/image"
+import { CSSProperties } from 'styled-components'
+import NextImage from 'next/image'
 
 interface ImageProps {
   src: string
@@ -7,15 +7,9 @@ interface ImageProps {
   style?: CSSProperties | undefined
 }
 
-const Image = ({src, alt, style}: ImageProps) => {
+const Image = ({ src, alt, style }: ImageProps) => {
   return (
-    <NextImage
-      src={src}
-      alt={alt}
-      width={500}
-      height={500}
-      style={style}
-    />
+    <NextImage src={src} alt={alt} width={500} height={500} style={style} />
   )
 }
 

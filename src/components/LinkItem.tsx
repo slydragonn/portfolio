@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { ReactNode } from "react"
+import Link from 'next/link'
+import { ReactNode } from 'react'
 
 interface LinkItemProps {
   children: ReactNode
@@ -7,20 +7,16 @@ interface LinkItemProps {
   isExternal?: boolean
 }
 
-const LinkItem = ({children, href, isExternal = false}: LinkItemProps) => {
-  if(isExternal) {
+const LinkItem = ({ children, href, isExternal = false }: LinkItemProps) => {
+  if (isExternal) {
     return (
-      <a href={href} target='_blank' rel="noreferrer">
+      <a href={href} target="_blank" rel="noreferrer">
         {children}
       </a>
     )
   }
 
-  return (
-    <Link href={href}>
-      {children}
-    </Link>
-  )
+  return <Link href={href}>{children}</Link>
 }
 
 export default LinkItem
