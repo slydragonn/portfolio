@@ -10,6 +10,11 @@ module.exports = {
     extend: {},
     fontFamily: {
       raleway: ['Raleway', 'sans-serif']
+    },
+    colors: {
+      black: '#1e1e1e',
+      white: '#FFFBF9',
+      orange: '#e4830e'
     }
   },
   plugins: []

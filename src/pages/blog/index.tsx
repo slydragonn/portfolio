@@ -1,9 +1,13 @@
 import { NextPage } from 'next'
 import { Title } from 'components'
+import Head from 'next/head'
 
 const Blog: NextPage = () => {
   return (
     <main>
+      <Head>
+        <title>Alejandro&apos;s Portfolio | Blog</title>
+      </Head>
       <div className="mt-10">
         <Title>Blog</Title>
       </div>

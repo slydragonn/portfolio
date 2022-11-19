@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Alejandro&apos;s Portfolio</title>
+        <title>Alejandro&apos;s Portfolio | Home</title>
         <meta name="description" content="Alejandro's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -24,11 +24,11 @@ const Home: NextPage = () => {
           className="flex flex-col items-center justify-center px-3"
         >
           <Title>Alejandro Londoño</Title>
-          <p className="uppercase font-thin text-base sm:text-xl md:text-2xl mb-2 text-[#1e1e1e] text-center">
+          <p className="uppercase font-thin text-base sm:text-xl md:text-2xl mb-2 text-black dark:text-white text-center">
             Front-End Developer
           </p>
           <SocialNetworks />
-          <p className="max-w-lg text-center font-extralight my-5 text-[#1e1e1e]">
+          <p className="max-w-lg text-center font-extralight my-5 text-black dark:text-white">
             Hi! I&apos;m a Front-End Developer from Medellín, Colombia. I
             specialize in front-end apps with JavaScript and React.
           </p>
@@ -36,8 +36,8 @@ const Home: NextPage = () => {
             <LinkItem href="/work">MY PORTFOLIO</LinkItem>
           </Button>
         </section>
-        <div className="w-full border-b border-gray-300 mb-6 text-center">
-          <h3 className="font-semibold text-[#1e1e1e]">About me</h3>
+        <div className="w-full border-b border-black dark:border-[#606060] mb-6 text-center">
+          <h3 className="font-semibold text-black dark:text-white">About me</h3>
         </div>
         <section className="flex flex-col items-center mb-20 p-3">
           <Image
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             }}
           />
           <Tag width="auto">Hi! I&apos;m an Indie Front-End Developer</Tag>
-          <p className="max-w-lg font-light text-center mt-10">
+          <p className="max-w-2xl font-light text-center mt-10 text-black dark:text-white">
             I&apos;m an Indie Front-End Developer from Medellin, Colombia. I
             like to experiment with all kinds of things, especially programming
             and I love building new apps and digital experiences. All code is
@@ -59,10 +59,10 @@ const Home: NextPage = () => {
             job, in my projects I focus on quality rather than quantity, and not
             only the code but also its entire life cycle.
           </p>
-          <p className="max-w-lg font-light text-center mt-10">
+          <p className="max-w-lg text-center mt-10 text-black dark:text-white">
             I ♥ Music,{' '}
             <a
-              className="text-orange-600"
+              className="text-orange"
               href="https://www.instagram.com/slydragonn/"
               target="_blank"
               rel="noreferrer"
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
             </a>{' '}
             and Creating Content for{' '}
             <a
-              className="text-orange-600"
+              className="text-orange"
               href="https://www.youtube.com/@slydragonn"
               target="_blank"
               rel="noreferrer"
@@ -80,8 +80,8 @@ const Home: NextPage = () => {
             </a>
           </p>
         </section>
-        <div className="w-full border-b border-gray-300 mb-6 text-center">
-          <h3 className="font-semibold text-[#1e1e1e]">
+        <div className="w-full border-b border-black dark:border-[#606060] mb-6 text-center">
+          <h3 className="font-semibold text-black dark:text-white">
             Lastest Youtube Videos
           </h3>
         </div>

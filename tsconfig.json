@@ -20,7 +20,8 @@
       "models/*": ["models/*"],
       "context/*": ["context/*"],
       "utils/*": ["utils/*"],
-      "styledComponents/*": ["styledComponents/*"]
+      "styledComponents/*": ["styledComponents/*"],
+      "hooks/*": ["hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -25,12 +25,13 @@ const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
           width: '350px',
           height: '200px',
           borderRadius: '5px',
-          border: '3px solid #1e1e1e'
+        
         }}
+        className='border-[3px] border-black dark:border-white'
       />
       <div className="flex flex-col justify-between items-center md:items-start w-full sm:w-[350px] h-[200px] mt-4 md:mt-0">
         <Tag width="100%">{title}</Tag>
-        <p className="text-center md:text-left">{summary}</p>
+        <p className="text-center md:text-left text-black dark:text-white">{summary}</p>
         <Button>
           <LinkItem href={link} isExternal={true}>
             VISIT

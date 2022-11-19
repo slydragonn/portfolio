@@ -1,1 +1,1 @@
-export { NavbarItem } from './Navbar'
+export { NavbarItem, ThemeButton } from './Navbar'
