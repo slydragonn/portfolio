@@ -17,7 +17,8 @@ const Navbar = ({handleTheme}: NavbarProps) => {
   const { pathname } = useRouter()
 
   return (
-    <nav className="z-30 fixed top-0 left-0 flex justify-around items-center w-full h-[50px] bg-white/90 dark:bg-black/90 backdrop-blur-sm text-black dark:text-white">
+    <nav className="z-30 fixed top-0 left-0 flex justify-center items-center w-full h-[50px] bg-white/90 dark:bg-black/90 backdrop-blur-sm text-black dark:text-white">
+      <section className='flex justify-between items-center w-full md:w-[768px] h-full px-8 md:px-0'>
       <LinkItem href="/">
         <HomeIcon className="w-5 h-5" />
       </LinkItem>
@@ -42,6 +43,7 @@ const Navbar = ({handleTheme}: NavbarProps) => {
               </ThemeButton> 
             )
         }
+        </section>
     </nav>
   )
 }

@@ -5,7 +5,8 @@ import {
   Tag,
   Title,
   Image,
-  Card
+  Card,
+  SubTitle
 } from 'components'
 import { NextPage } from 'next'
 import Head from 'next/head'
@@ -16,7 +17,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Alejandro&apos;s Portfolio | Home</title>
         <meta name="description" content="Alejandro's Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="relative flex flex-col items-center">
         <section
@@ -36,10 +36,9 @@ const Home: NextPage = () => {
             <LinkItem href="/work">MY PORTFOLIO</LinkItem>
           </Button>
         </section>
-        <div className="w-full border-b border-black dark:border-[#606060] mb-6 text-center">
-          <h3 className="font-semibold text-black dark:text-white">About me</h3>
-        </div>
-        <section className="flex flex-col items-center mb-20 p-3">
+        <section className='max-w-lg'>
+        <SubTitle>About me</SubTitle>
+        <section className="flex flex-col items-center mb-20 px-4 sm:px-0">
           <Image
             src="/alejo.png"
             alt="Alejandro Londoño Picture"
@@ -50,8 +49,8 @@ const Home: NextPage = () => {
               marginBottom: '20px'
             }}
           />
-          <Tag width="auto">Hi! I&apos;m an Indie Front-End Developer</Tag>
-          <p className="max-w-2xl font-light text-center mt-10 text-black dark:text-white">
+          <Tag width="100%">Hi! I&apos;m an Indie Front-End Developer</Tag>
+          <p className="font-light dark:font-normal text-justify mt-10 text-black dark:text-white">
             I&apos;m an Indie Front-End Developer from Medellin, Colombia. I
             like to experiment with all kinds of things, especially programming
             and I love building new apps and digital experiences. All code is
@@ -80,12 +79,8 @@ const Home: NextPage = () => {
             </a>
           </p>
         </section>
-        <div className="w-full border-b border-black dark:border-[#606060] mb-6 text-center">
-          <h3 className="font-semibold text-black dark:text-white">
-            Lastest Youtube Videos
-          </h3>
-        </div>
-        <section className="flex flex-col md:flex-row justify-around items-center w-full h-[600px] md:h-auto mb-20 px-3">
+        <SubTitle>Lastest Youtube Videos</SubTitle>
+        <section className="flex flex-col md:flex-row justify-between items-center w-full h-[450px] md:h-auto mb-20">
           <Card
             image="/assets/work/youtube-min.png"
             title="Link in Bio page"
@@ -96,6 +91,7 @@ const Home: NextPage = () => {
             title="CSS Text Gradient"
             link="https://www.youtube.com/@slydragonn"
           />
+        </section>
         </section>
       </main>
     </div>
