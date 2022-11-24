@@ -23,7 +23,7 @@ const Work: NextPage = () => {
         />
         <ProjectItem
           image={{
-            url: '/assets/work/blue-river.png',
+            url: '/assets/work/blue-river.PNG',
             alt: 'Blue River home page design'
           }}
           title="Blue River Home Page"
@@ -32,7 +32,7 @@ const Work: NextPage = () => {
         />
         <ProjectItem
           image={{
-            url: '/assets/work/portfolio.png',
+            url: '/assets/work/portfolio.PNG',
             alt: 'Alejandro Londoño Portfolio'
           }}
           title="Developer Portfolio"
@@ -41,7 +41,7 @@ const Work: NextPage = () => {
         />
         <ProjectItem
           image={{
-            url: '/assets/work/barber.png',
+            url: '/assets/work/barber.PNG',
             alt: 'Barber website design'
           }}
           title="Barber's Website"
