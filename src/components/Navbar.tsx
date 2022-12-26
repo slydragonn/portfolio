@@ -5,7 +5,8 @@ import { useRouter } from 'next/router'
 import { RiHomeLine as HomeIcon, RiMoonFill as MoonIcon } from 'react-icons/ri'
 import {IoIosSunny as SunIcon } from 'react-icons/io'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ReactNode } from 'react'
+import { Children } from 'models'
+import { AnimatedTap } from './animations'
 
 type HandleTheme = {
   theme: null | 'dark' | 'light',
@@ -26,7 +27,7 @@ const animations = {
   }
 }
 interface AnimatedItemProps {
-  children: ReactNode
+  children: Children
   key: string | null
 }
 
@@ -55,18 +56,24 @@ const Navbar = ({handleTheme}: NavbarProps) => {
 
   return (
     <AnimatePresence mode='wait' initial={false}>
-      <nav className="z-30 fixed top-0 left-0 flex justify-center items-center w-full h-[50px] bg-white/90 dark:bg-black/90 backdrop-blur-sm text-black dark:text-white">
+      <nav className="z-30 fixed top-0 left-0 flex justify-center items-center w-full h-[50px] bg-white/80 dark:bg-black/80 backdrop-blur-md text-black dark:text-white">
       <section className='flex justify-between items-center w-full md:w-[768px] h-full px-8 md:px-0'>
       <LinkItem href="/">
-        <HomeIcon className="w-5 h-5" />
+        <AnimatedTap>
+          <HomeIcon className="w-5 h-5" />
+        </AnimatedTap>
       </LinkItem>
       <ul className="flex flex-row w-[120px] justify-between">
-        <NavbarItem isActive={isEqual(pathname, '/work')} theme={handleTheme.theme}>
-          <LinkItem href="/work">WORK</LinkItem>
-        </NavbarItem>
-        <NavbarItem isActive={isEqual(pathname, '/blog')} theme={handleTheme.theme}>
-          <LinkItem href="/blog">BLOG</LinkItem>
-        </NavbarItem>
+        <AnimatedTap>
+          <NavbarItem isActive={isEqual(pathname, '/work')} theme={handleTheme.theme}>
+            <LinkItem href="/work">WORK</LinkItem>
+          </NavbarItem>
+        </AnimatedTap>
+        <AnimatedTap>
+          <NavbarItem isActive={isEqual(pathname, '/blog')} theme={handleTheme.theme}>
+            <LinkItem href="/blog">BLOG</LinkItem>
+          </NavbarItem>
+        </AnimatedTap>
       </ul>
         <AnimatedItem key={handleTheme.theme}>
           <ThemeButton theme={handleTheme.theme} onClick={handleTheme.toggleTheme}>

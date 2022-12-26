@@ -17,7 +17,7 @@ const Card = ({ image, title, link }: CardProps) => {
             width: '240px',
             height: '150px',
             borderRadius: '5px',
-          
+            objectFit: 'cover'
           }}
           className='border-2 border-black dark:border-white'
         />

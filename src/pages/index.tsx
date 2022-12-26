@@ -43,14 +43,14 @@ const Home: NextPage = () => {
             src="/alejo.png"
             alt="Alejandro Londoño Picture"
             style={{
-              width: '200px',
-              height: '220px',
-              borderRadius: '5px',
+              width: '150px',
+              height: '150px',
+              borderRadius: '150px',
               marginBottom: '20px',
               objectFit: 'cover'
             }}
           />
-          <Tag width="100%">Hi! I&apos;m an Indie Front-End Developer</Tag>
+          <Tag width="100%">Hi! I&apos;m an Indie Front-End Developer 💻🐉</Tag>
           <p className="font-light dark:font-normal text-justify mt-10 text-black dark:text-white">
             I&apos;m an Indie Front-End Developer from Medellin, Colombia. I
             like to experiment with all kinds of things, especially programming

@@ -29,7 +29,7 @@ const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
         }}
         className='border-[3px] border-black dark:border-white'
       />
-      <div className="flex flex-col justify-between items-center md:items-start max-w-[350px] h-[200px] mt-4 md:mt-0">
+      <div className="flex flex-col justify-between items-center md:items-start max-w-[350px] sm:w-[350px] h-[200px] mt-4 md:mt-0">
         <Tag width="100%">{title}</Tag>
         <p className="text-center md:text-left text-black dark:text-white">{summary}</p>
         <Button>
