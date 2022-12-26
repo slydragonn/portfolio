@@ -25,7 +25,8 @@ const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
           width: '350px',
           height: '200px',
           borderRadius: '5px',
-          objectFit: 'cover'
+          objectFit: 'cover',
+          padding: '2px'
         }}
         className='border-[3px] border-black dark:border-white'
       />

@@ -5,10 +5,8 @@ const useTheme = () => {
 
   useEffect(() => {
     if (localStorage.theme == 'dark') {
-      console.log('hello')
       setTheme(() => 'dark')
     } else {
-      console.log('ll')
       setTheme(() => 'light')
     }
   }, [])

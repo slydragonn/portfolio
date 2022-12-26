@@ -8,12 +8,13 @@ import {
   Card,
   SubTitle
 } from 'components'
+import { AnimatedShow } from 'components/animations'
 import { NextPage } from 'next'
 import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <AnimatedShow>
       <Head>
         <title>Alejandro&apos;s Portfolio | Home</title>
         <meta name="description" content="Alejandro's Portfolio" />
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
           <SocialNetworks />
           <p className="max-w-lg text-center font-extralight my-5 text-black dark:text-white">
             Hi! I&apos;m a Front-End Developer from Medellín, Colombia. I
-            specialize in front-end apps with JavaScript and React.
+            specialize in Front-End Apps with JavaScript and React.
           </p>
           <Button>
             <LinkItem href="/work">MY PORTFOLIO</LinkItem>
@@ -95,7 +96,7 @@ const Home: NextPage = () => {
         </section>
         </section>
       </main>
-    </div>
+    </AnimatedShow>
   )
 }
 
