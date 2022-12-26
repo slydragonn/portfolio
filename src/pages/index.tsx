@@ -44,9 +44,10 @@ const Home: NextPage = () => {
             alt="Alejandro Londoño Picture"
             style={{
               width: '200px',
-              height: '200px',
+              height: '220px',
               borderRadius: '5px',
-              marginBottom: '20px'
+              marginBottom: '20px',
+              objectFit: 'cover'
             }}
           />
           <Tag width="100%">Hi! I&apos;m an Indie Front-End Developer</Tag>
