@@ -13,7 +13,7 @@ const Work: NextPage = () => {
         <div className="mt-10">
           <Title>Work</Title>
         </div>
-        <section className="mt-20">
+        <section className="flex flex-col gap-24 my-20">
           <ProjectItem
             image={{
               url: '/assets/work/youtube-min.png',
