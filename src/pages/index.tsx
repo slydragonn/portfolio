@@ -33,9 +33,9 @@ const Home: NextPage = () => {
             Hi! I&apos;m a Front-End Developer from Medellín, Colombia. I
             specialize in Front-End Apps with JavaScript and React.
           </p>
-          <Button>
-            <LinkItem href="/work">MY PORTFOLIO</LinkItem>
-          </Button>
+          <LinkItem href="/work">
+            <Button>MY PORTFOLIO</Button>
+          </LinkItem>
         </section>
         <section className='max-w-lg'>
         <SubTitle>About me</SubTitle>

@@ -15,7 +15,7 @@ interface ProjectItemProps {
 
 const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
   return (
-    <article className="flex flex-col md:flex-row justify-between items-center w-full px-5 mb-20">
+    <article className="flex flex-col md:flex-row justify-between items-center w-full">
       <Image
         src={image.url}
         alt={image.alt}
@@ -33,11 +33,9 @@ const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
       <div className="flex flex-col justify-between items-center md:items-start max-w-[350px] sm:w-[350px] h-[200px] mt-4 md:mt-0">
         <Tag width="100%">{title}</Tag>
         <p className="text-center md:text-left text-black dark:text-white">{summary}</p>
-        <Button>
-          <LinkItem href={link} isExternal={true}>
-            VISIT
-          </LinkItem>
-        </Button>
+        <LinkItem href={link} isExternal={true}>
+          <Button>VISIT</Button>
+        </LinkItem>
       </div>
     </article>
   )
