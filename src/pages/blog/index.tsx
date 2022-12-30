@@ -10,7 +10,7 @@ const notion = new Client({
   auth: NOTION_TOKEN
 })
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await notion.databases.query({
     database_id: NOTION_DB as string,
     filter: {
@@ -45,7 +45,6 @@ export async function getServerSideProps() {
 }
 
 const Blog: NextPage = ({posts}:any) => {
-console.log(posts)
   return (
     <AnimatedShow>
       <main>
