@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Button, LinkItem, Tag } from 'components'
+import { LinkItem, Tag } from 'components'
 
 type Image = {
   url: string
@@ -15,29 +15,28 @@ interface ProjectItemProps {
 
 const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
   return (
-    <article className="flex flex-col md:flex-row justify-between items-center w-full">
-      <Image
-        src={image.url}
-        alt={image.alt}
-        width={500}
-        height={500}
-        style={{
-          width: '350px',
-          height: '200px',
-          borderRadius: '5px',
-          objectFit: 'cover',
-          padding: '2px'
-        }}
-        className='border-[3px] border-black dark:border-white'
-      />
-      <div className="flex flex-col justify-between items-center md:items-start max-w-[350px] sm:w-[350px] h-[200px] mt-4 md:mt-0">
-        <Tag width="100%">{title}</Tag>
-        <p className="text-center md:text-left text-black dark:text-white">{summary}</p>
-        <LinkItem href={link} isExternal={true}>
-          <Button>VISIT</Button>
-        </LinkItem>
-      </div>
-    </article>
+    <LinkItem href={link} isExternal={true}>
+      <article className="flex flex-col items-center w-[240px]">
+        <Image
+          src={image.url}
+          alt={image.alt}
+          width={500}
+          height={500}
+          style={{
+            width: '240px',
+            height: '150px',
+            borderRadius: '5px',
+            objectFit: 'cover',
+            padding: '2px'
+          }}
+          className='border-[3px] border-black dark:border-white'
+        />
+        <div className="flex flex-col justify-center items-center gap-2 w-full mt-4">
+          <Tag width="100%">{title}</Tag>
+          <p className="text-center text-black dark:text-white">{summary}</p>
+        </div>
+      </article>
+    </LinkItem>
   )
 }
 

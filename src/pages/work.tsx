@@ -1,4 +1,4 @@
-import { ProjectItem, Title } from 'components'
+import { Card, ProjectItem, SubTitle, Title } from 'components'
 import { AnimatedShow } from 'components/animations'
 import { NextPage } from 'next'
 import Head from 'next/head'
@@ -13,49 +13,56 @@ const Work: NextPage = () => {
         <div className="mt-10">
           <Title>Work</Title>
         </div>
-        <section className="flex flex-col gap-24 my-20">
-          <ProjectItem
-            image={{
-              url: '/assets/work/youtube-min.png',
-              alt: 'slydragonn youtube channel'
-            }}
-            title="YouTube Channel"
-            summary="My videos are about how I program different types of projects."
-            link="https://www.youtube.com/@slydragonn"
-          />
-          <ProjectItem
-            image={{
-              url: '/assets/work/blue-river.PNG',
-              alt: 'Blue River home page design'
-            }}
-            title="Blue River Home Page"
-            summary="Home page for an entrepreneurship project for the Medellin metropolitan area."
-            link="https://blue-river.vercel.app"
-          />
-          <ProjectItem
-            image={{
-              url: '/assets/work/portfolio.PNG',
-              alt: 'Alejandro Londoño Portfolio'
-            }}
-            title="Developer Portfolio"
-            summary="This Website is made with Nextjs and TypeScript."
-            link="/"
-          />
-          <ProjectItem
-            image={{
-              url: '/assets/work/barber.PNG',
-              alt: 'Barber website design'
-            }}
-            title="Barber's Website"
-            summary="Personal Website for a Barber, made with Nextjs."
-            link="https://danielbarber.vercel.app/"
-          />
-          <ProjectItem
-            image={{ url: '/assets/work/markwriter.jpg', alt: 'Mark Writer' }}
-            title="Markdown Web Editor"
-            summary="Simple and Minimalist Markdown Web Editor."
-            link="https://markwriter.tech/"
-          />
+        <section className="flex flex-col items-center gap-20 my-20">
+          <section className='flex flex-wrap justify-center gap-8 max-w-lg'>
+            <SubTitle>Projects</SubTitle>
+            <ProjectItem
+              image={{
+                url: '/assets/work/blue-river.PNG',
+                alt: 'Blue River home page design'
+              }}
+              title="Blue River Home Page"
+              summary="Home page for an entrepreneurship project for the Medellin metropolitan area."
+              link="https://blue-river.vercel.app"
+            />
+            <ProjectItem
+              image={{
+                url: '/assets/work/portfolio.PNG',
+                alt: 'Alejandro Londoño Portfolio'
+              }}
+              title="Developer Portfolio"
+              summary="This Website is made with Nextjs and TypeScript."
+              link="/"
+            />
+            <ProjectItem
+              image={{
+                url: '/assets/work/barber.PNG',
+                alt: 'Barber website design'
+              }}
+              title="Barber's Website"
+              summary="Personal Website for a Barber, made with Nextjs."
+              link="https://danielbarber.vercel.app/"
+            />
+            <ProjectItem
+              image={{ url: '/assets/work/markwriter.jpg', alt: 'Mark Writer' }}
+              title="Markdown Web Editor"
+              summary="Simple and Minimalist Markdown Web Editor."
+              link="https://markwriter.tech/"
+            />
+          </section>
+          <section className='flex flex-wrap justify-center gap-8 max-w-lg'>
+            <SubTitle>📹 Youtube Channel | @slydragonn</SubTitle>
+            <Card
+              image="/assets/work/youtube-min.png"
+              title="Link in Bio page"
+              link="https://www.youtube.com/@slydragonn"
+            />
+            <Card
+              image="/short.webp"
+              title="CSS Text Gradient"
+              link="https://www.youtube.com/@slydragonn"
+            />
+          </section>
         </section>
       </main>
     </AnimatedShow>

@@ -81,7 +81,7 @@ const Home: NextPage = () => {
             </a>
           </p>
         </section>
-        <SubTitle>Lastest Youtube Videos</SubTitle>
+        <SubTitle>📹 Lastest Youtube Videos</SubTitle>
         <section className="flex flex-col md:flex-row justify-between items-center w-full h-[450px] md:h-auto mb-20">
           <Card
             image="/assets/work/youtube-min.png"
