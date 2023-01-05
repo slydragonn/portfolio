@@ -8,12 +8,11 @@ interface NavbarItemProps {
 
 export const NavbarItem = styled.li<NavbarItemProps>`
   color: ${props => {
-    
-    if(props.isActive && props.theme === 'light') {
+    if (props.isActive && props.theme === 'light') {
       return COLORS.white100
     } else if (props.isActive && props.theme === 'dark') {
       return COLORS.black100
-    }else if (props.theme === 'light') {
+    } else if (props.theme === 'light') {
       return COLORS.black100
     }
     return COLORS.white100
@@ -40,6 +39,6 @@ export const ThemeButton = styled.button<ThemeButtonProps>`
   align-items: center;
   width: 25px;
   height: 25px;
-  background-color: ${props => props.theme === 'dark' ? 'orange': 'purple'};
+  background-color: ${props => (props.theme === 'dark' ? 'orange' : 'purple')};
   border-radius: 3px;
 `

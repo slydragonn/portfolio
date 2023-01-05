@@ -20,7 +20,7 @@ const Card = ({ image, title, link }: CardProps) => {
             objectFit: 'cover',
             padding: '2px'
           }}
-          className='border-2 border-black dark:border-white hover:scale-90 transition-all duration-300'
+          className="border-2 border-black dark:border-white hover:scale-90 transition-all duration-300"
         />
       </LinkItem>
       <div className="mt-3">

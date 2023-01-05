@@ -2,9 +2,9 @@ import { NextPage } from 'next'
 import { Title, ArticleCard } from 'components'
 import Head from 'next/head'
 import { AnimatedShow } from 'components/animations'
-import { Client } from "@notionhq/client"
+import { Client } from '@notionhq/client'
 
-const {NOTION_TOKEN, NOTION_DB} = process.env
+const { NOTION_TOKEN, NOTION_DB } = process.env
 
 const notion = new Client({
   auth: NOTION_TOKEN
@@ -16,15 +16,15 @@ export async function getStaticProps() {
     filter: {
       and: [
         {
-          property: "Public",
+          property: 'Public',
           checkbox: {
             equals: true
           }
         },
         {
-          property: "Status",
+          property: 'Status',
           status: {
-            equals: "Done"
+            equals: 'Done'
           }
         }
       ]
@@ -44,7 +44,7 @@ export async function getStaticProps() {
   }
 }
 
-const Blog: NextPage = ({posts}:any) => {
+const Blog: NextPage = ({ posts }: any) => {
   return (
     <AnimatedShow>
       <main>
@@ -54,23 +54,23 @@ const Blog: NextPage = ({posts}:any) => {
         <div className="mt-10">
           <Title>Blog</Title>
         </div>
-        <section className='flex flex-col gap-16 border-l border-l-[#b8b8b8] p-4 my-20 mx-4 md:mx-0'>
-          {
-            posts.results.length 
-              ? (
-                  posts.results.map((post:any) => (
-                    <ArticleCard 
-                      key={post.id}
-                      creationDate={post.created_time}
-                      title={post.properties.Name.title[0].text.content}
-                      content={post.properties.Content.rich_text[0].text.content}
-                      categories={post.properties.Categories.multi_select}
-                      url={post.properties.Url.url}
-                    />
-                  ))
-                )
-              : <h3 className='text-black dark:text-white text-xl'>🍳 Items are cooking!</h3>
-          }
+        <section className="flex flex-col gap-16 border-l border-l-[#b8b8b8] p-4 my-20 mx-4 md:mx-0">
+          {posts.results.length ? (
+            posts.results.map((post: any) => (
+              <ArticleCard
+                key={post.id}
+                creationDate={post.created_time}
+                title={post.properties.Name.title[0].text.content}
+                content={post.properties.Content.rich_text[0].text.content}
+                categories={post.properties.Categories.multi_select}
+                url={post.properties.Url.url}
+              />
+            ))
+          ) : (
+            <h3 className="text-black dark:text-white text-xl">
+              🍳 Items are cooking!
+            </h3>
+          )}
         </section>
       </main>
     </AnimatedShow>

@@ -29,7 +29,7 @@ const ProjectItem = ({ image, title, link, summary }: ProjectItemProps) => {
             objectFit: 'cover',
             padding: '2px'
           }}
-          className='border-[3px] border-black dark:border-white'
+          className="border-[3px] border-black dark:border-white"
         />
         <div className="flex flex-col justify-center items-center gap-2 w-full mt-4">
           <Tag width="100%">{title}</Tag>

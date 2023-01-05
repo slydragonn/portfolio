@@ -11,27 +11,27 @@ if (typeof window !== 'undefined') {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  const {theme, toggleTheme} = useTheme()
-  const {route} = useRouter()
+  const { theme, toggleTheme } = useTheme()
+  const { route } = useRouter()
 
   return (
     <>
       <Head>
-          <link rel="icon" href="/dragon.png" />
-        </Head>
+        <link rel="icon" href="/dragon.png" />
+      </Head>
       <div className="font-raleway bg-[#fffbf9] dark:bg-[#1e1e1e]">
-        <Navbar handleTheme={{theme, toggleTheme}}/>
+        <Navbar handleTheme={{ theme, toggleTheme }} />
         <MainLayout>
-          <AnimatePresence 
-            mode='wait' 
-            initial={true} 
+          <AnimatePresence
+            mode="wait"
+            initial={true}
             onExitComplete={() => {
               if (typeof window !== 'undefined') {
                 window.scrollTo({ top: 0 })
               }
             }}
           >
-            <Component {...pageProps} key={route}/>
+            <Component {...pageProps} key={route} />
           </AnimatePresence>
         </MainLayout>
         <Footer />

@@ -14,7 +14,7 @@ const Work: NextPage = () => {
           <Title>Work</Title>
         </div>
         <section className="flex flex-col items-center gap-20 my-20">
-          <section className='flex flex-wrap justify-center gap-8 max-w-lg'>
+          <section className="flex flex-wrap justify-center gap-8 max-w-lg">
             <SubTitle>Projects</SubTitle>
             <ProjectItem
               image={{
@@ -50,7 +50,7 @@ const Work: NextPage = () => {
               link="https://markwriter.tech/"
             />
           </section>
-          <section className='flex flex-wrap justify-center gap-8 max-w-lg'>
+          <section className="flex flex-wrap justify-center gap-8 max-w-lg">
             <SubTitle>📹 Youtube Channel | @slydragonn</SubTitle>
             <Card
               image="/assets/work/youtube-min.png"

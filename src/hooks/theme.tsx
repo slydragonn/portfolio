@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 const useTheme = () => {
   const [theme, setTheme] = useState<null | 'dark' | 'light'>(null)
@@ -12,7 +12,7 @@ const useTheme = () => {
   }, [])
 
   const toggleTheme = () => {
-    setTheme(theme => theme === 'dark' ? 'light' : 'dark')
+    setTheme(theme => (theme === 'dark' ? 'light' : 'dark'))
   }
 
   useEffect(() => {

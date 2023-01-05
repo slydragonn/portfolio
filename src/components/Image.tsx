@@ -10,7 +10,14 @@ interface ImageProps {
 
 const Image = ({ src, alt, style, className }: ImageProps) => {
   return (
-    <NextImage src={src} alt={alt} width={500} height={500} style={style} className={className}/>
+    <NextImage
+      src={src}
+      alt={alt}
+      width={500}
+      height={500}
+      style={style}
+      className={className}
+    />
   )
 }
 

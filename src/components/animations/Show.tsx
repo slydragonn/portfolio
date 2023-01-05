@@ -1,6 +1,5 @@
-import { motion } from "framer-motion"
-import { Children } from "models"
-
+import { motion } from 'framer-motion'
+import { Children } from 'models'
 
 const show = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -19,10 +18,10 @@ const AnimatedShow = ({ children }: AnimatedShowProps) => {
       initial="hidden"
       animate="enter"
       exit="exit"
-      transition={{ duration: 0.4, ease: 'easeInOut'}}
+      transition={{ duration: 0.4, ease: 'easeInOut' }}
       style={{ position: 'relative' }}
     >
-      { children }
+      {children}
     </motion.div>
   )
 }
