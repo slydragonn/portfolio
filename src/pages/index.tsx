@@ -86,13 +86,13 @@ const Home: NextPage = () => {
           <SubTitle>📹 Lastest Youtube Videos</SubTitle>
           <section className="flex flex-col md:flex-row justify-between items-center w-full h-[450px] md:h-auto mb-20">
             <Card
-              image="/assets/work/youtube-min.png"
-              title="Link in Bio page"
-              link="https://www.youtube.com/@slydragonn"
+              image="/assets/youtube/md.jpg"
+              title="Markdown Editor with React"
+              link="https://www.youtube.com/watch?v=iqH62Q7otJw"
             />
             <Card
-              image="/short.webp"
-              title="CSS Text Gradient"
+              image="/assets/youtube/link.png"
+              title="Link in Bio page"
               link="https://www.youtube.com/@slydragonn"
             />
           </section>

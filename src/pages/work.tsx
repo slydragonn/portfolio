@@ -17,6 +17,12 @@ const Work: NextPage = () => {
           <section className="flex flex-wrap justify-center gap-8 max-w-lg">
             <SubTitle>Projects</SubTitle>
             <ProjectItem
+              image={{ url: '/assets/work/md-editor.png', alt: 'MarkWriter' }}
+              title="MarkWriter"
+              summary="Simple and Minimalist Markdown Web Editor."
+              link="https://markwriter.tech/"
+            />
+            <ProjectItem
               image={{
                 url: '/assets/work/blue-river.PNG',
                 alt: 'Blue River home page design'
@@ -43,23 +49,17 @@ const Work: NextPage = () => {
               summary="Personal Website for a Barber, made with Nextjs."
               link="https://danielbarber.vercel.app/"
             />
-            <ProjectItem
-              image={{ url: '/assets/work/markwriter.jpg', alt: 'Mark Writer' }}
-              title="Markdown Web Editor"
-              summary="Simple and Minimalist Markdown Web Editor."
-              link="https://markwriter.tech/"
-            />
           </section>
           <section className="flex flex-wrap justify-center gap-8 max-w-lg">
             <SubTitle>📹 Youtube Channel | @slydragonn</SubTitle>
             <Card
-              image="/assets/work/youtube-min.png"
-              title="Link in Bio page"
-              link="https://www.youtube.com/@slydragonn"
+              image="/assets/youtube/md.jpg"
+              title="Markdown Editor with React"
+              link="https://www.youtube.com/watch?v=iqH62Q7otJw"
             />
             <Card
-              image="/short.webp"
-              title="CSS Text Gradient"
+              image="/assets/youtube/link.png"
+              title="Link in Bio page"
               link="https://www.youtube.com/@slydragonn"
             />
           </section>
