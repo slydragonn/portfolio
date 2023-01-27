@@ -16,11 +16,6 @@ const SocialNetworks = () => {
         </LinkItem>
       </li>
       <li>
-        <LinkItem href="https://twitter.com/slydragonn" isExternal={true}>
-          <SiTwitter />
-        </LinkItem>
-      </li>
-      <li>
         <LinkItem href="https://www.linkedin.com/in/alejolg/" isExternal={true}>
           <SiLinkedin />
         </LinkItem>
