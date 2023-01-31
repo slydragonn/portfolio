@@ -59,7 +59,7 @@ const Blog: NextPage = ({ posts }: any) => {
             posts.results.map((post: any) => (
               <ArticleCard
                 key={post.id}
-                creationDate={post.created_time}
+                creationDate={post.properties.Date.date.start}
                 title={post.properties.Name.title[0].text.content}
                 content={post.properties.Content.rich_text[0].text.content}
                 categories={post.properties.Categories.multi_select}

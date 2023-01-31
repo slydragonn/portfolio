@@ -17,7 +17,7 @@ const ArticleCard = ({
   categories,
   url
 }: ArticleCardProps) => {
-  const date = dateFormat(creationDate, 'yyyy.mm.dd')
+  const date = dateFormat(creationDate, 'yyyy·mm')
   return (
     <article>
       <div className="relative">
