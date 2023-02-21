@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           <SubTitle>About me</SubTitle>
           <section className="flex flex-col items-center mb-20 px-4 sm:px-0">
             <Image
-              src="/alejo.png"
+              src="/ale.jpg"
               alt="Alejandro Londoño Picture"
               style={{
                 width: '150px',
