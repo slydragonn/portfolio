@@ -53,6 +53,11 @@ const Work: NextPage = () => {
           <section className="flex flex-wrap justify-center gap-8 max-w-lg">
             <SubTitle>📹 Youtube Channel | @slydragonn</SubTitle>
             <Card
+              image="/assets/youtube/neovim.jpg"
+              title="My Neovim Setup"
+              link="https://youtu.be/vkCnPdaRBE0"
+            />
+            <Card
               image="/assets/youtube/md.jpg"
               title="Markdown Editor with React"
               link="https://www.youtube.com/watch?v=iqH62Q7otJw"

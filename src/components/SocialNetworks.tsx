@@ -1,10 +1,10 @@
 import {
   SiYoutube,
-  SiTwitter,
   SiLinkedin,
   SiGithub,
   SiMedium
 } from 'react-icons/si'
+import { FaDev } from 'react-icons/fa'
 import LinkItem from './LinkItem'
 
 const SocialNetworks = () => {
@@ -24,6 +24,9 @@ const SocialNetworks = () => {
         <LinkItem href="https://github.com/slydragonn" isExternal={true}>
           <SiGithub />
         </LinkItem>
+      </li>
+      <li>
+        <LinkItem href='https://dev.to/slydragonn' isExternal={true}><FaDev /></LinkItem>
       </li>
       <li>
         <LinkItem href="https://medium.com/@slydragonn" isExternal={true}>
