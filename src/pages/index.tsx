@@ -51,16 +51,10 @@ const Home: NextPage = () => {
                 objectFit: 'cover'
               }}
             />
-            <Tag width="100%">
-              Hi! I&apos;m an Indie Front-End Developer 💻🐉
-            </Tag>
+            <Tag width="100%">Hi! I&apos;m an Front-End Developer 💻🐉</Tag>
             <p className="font-light dark:font-normal text-justify mt-10 text-black dark:text-white">
-              I&apos;m an Indie Front-End Developer from Medellin, Colombia. I
-              like to experiment with all kinds of things, especially
-              programming and I love building new apps and digital experiences.
-              All the code is essential, and attention to detail makes a project
-              more than a job, in my projects I like to focus on detail and not
-              only on the code but also on its life cycle.
+              I&apos;m an Front-End Developer from Medellin, Colombia. I like to
+              enjoy life and coding...
             </p>
             <p className="max-w-lg text-center mt-10 text-black dark:text-white">
               I ♥ Music,{' '}
