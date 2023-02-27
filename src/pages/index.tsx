@@ -91,9 +91,9 @@ const Home: NextPage = () => {
               link="https://youtu.be/vkCnPdaRBE0"
             />
             <Card
-              image="/assets/youtube/md.jpg"
-              title="Markdown Editor with React"
-              link="https://www.youtube.com/watch?v=iqH62Q7otJw"
+              image="/assets/youtube/link.png"
+              title="Link in Bio page"
+              link="https://www.youtube.com/@slydragonn"
             />
           </section>
         </section>
