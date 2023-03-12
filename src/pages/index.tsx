@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         >
           <Title>Alejandro Londoño</Title>
           <p className="uppercase font-thin text-base sm:text-xl md:text-2xl text-black dark:text-white text-center">
-            Front-End Developer
+            Software Developer
           </p>
           <SocialNetworks />
           <LinkItem href="/work">
@@ -47,23 +47,14 @@ const Home: NextPage = () => {
                 objectFit: 'cover'
               }}
             />
-            <Tag width="100%">Hi! I&apos;m a Front-End Developer 💻🐉</Tag>
+            <Tag width="100%">Hi! I&apos;m a Software Developer 💻🐉</Tag>
             <p className="font-light dark:font-normal text-justify mt-10 text-black dark:text-white">
-              I&apos;m a Front-End Developer from Medellín, Colombia. I
-              specialize in Front-End Apps with JavaScript and React. I like to
+              I&apos;m a Software Developer from Medellín, Colombia. I
+              specialize in Front-End Apps with TypeScript and React. I like to
               enjoy life and coding...
             </p>
             <p className="max-w-lg text-center mt-10 text-black dark:text-white">
-              I ♥ Music,{' '}
-              <a
-                className="text-orange"
-                href="https://www.instagram.com/slydragonn/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Drawing
-              </a>{' '}
-              and Creating Content for{' '}
+              I ♥ Music, Drawing and Creating Content for{' '}
               <a
                 className="text-orange"
                 href="https://www.youtube.com/@slydragonn"
