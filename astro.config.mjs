@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://slydragonn.netlify.com',
+	site: 'https://slydragonn.netlify.app',
 	integrations: [mdx(), sitemap()],
 });
