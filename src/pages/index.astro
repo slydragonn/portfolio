@@ -1,0 +1,62 @@
+---
+import MainLayout from '../layouts/Main.astro';
+import Card from '../components/Card.astro';
+import CardLayout from '../layouts/CardLayout.astro';
+---
+
+<MainLayout>
+	<main>
+		<div class="landing">
+			<h1>Discover Projects That Can Help You!</h1>
+			<p>
+				Welcome to the slydragonn's portfolio
+			</p>
+		</div>
+		<CardLayout title='Explore what projects you might like' showSeeAll alignCards="space-between">
+			<Card 
+				title='Neovim Setup | Lazy.vim'
+				imgUrl='/icons/neovim.svg'
+				description='Ultimate Setup with lazy.nvim for Fullstack Developers'
+				url={{
+					more: '/projects/neovim-lazy',
+					visit: 'https://github.com/slydragonn/nvim-lazy'
+				}}
+			/>
+			<Card 
+				title='Nebula | Notion Templete'
+				imgUrl='/icons/notion.svg'
+				description='Notion Template for Content Creators'
+				url={{
+            		more: '/projects/nebula',
+					visit: 'https://slydragonn.gumroad.com/l/nebula'
+				}}
+            />
+            <Card 
+				title='Neovim Setup | Packer'
+				imgUrl='/icons/neovim.svg'
+				description='Neovim Setup with Packer for Windows and Linux'
+				url={{
+					more: '/projects/neovim-packer',
+					visit: 'https://github.com/slydragonn/dotfiles'
+				}}
+			/>
+		</CardLayout>
+	</main>
+</MainLayout>
+
+<style>
+	main {
+		width: 100%;
+	}
+	.landing {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 30px;
+		padding: 50px 0;
+		margin-bottom: 70px;
+	}
+	.landing > p {
+		color: gray;
+	}
+</style>

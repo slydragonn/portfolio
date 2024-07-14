@@ -1,0 +1,79 @@
+---
+import MainLayout from '../layouts/Main.astro';
+---
+
+<MainLayout>
+	<main>
+		<img src="/profile.jpg"/>
+		<h1>About Me</h1>
+		<p>
+			I'm Alejandro Londoño a Indie Software Developer from Medellin and I'm currently studying Computer Science so this portfolio is my way of learning and experimenting with what I'm passionate about.
+		</p>
+		<a class="link-button" href="/projects">My portfolio</a>
+		<p>You can see all the process of my projects in my Youtube Channel: <a href="https://www.youtube.com/@slydragonn" target="_blank">@slydragonn</a>, read my latest posts about programming here or in <a>Dev.to</a>. Also if you want talk something with me, you can do it via <a>Linkedln</a> :)</p>
+		<iframe
+			src="https://www.youtube.com/embed/vkCnPdaRBE0?si=qzug0cNdDFjn5Dkt"
+			title="Slydragonn Youtube Channel"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen>
+		</iframe>
+	</main>
+</Layout>
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		max-width: calc(100% - 2em);
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+	}
+	h1 {
+		text-align: center;
+	}
+	iframe {
+		width: 500px;
+		height: 300px;
+		border-radius: 20px;
+	}
+	img {
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 9999px;
+		border: 1px solid #272727;
+	}
+	p {
+		text-align: justify;
+	}
+	.link-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		width: 150px;
+		height: 40px;
+		border-radius: 5px;
+		background: greenyellow;
+		font-size: 16px;
+		font-weight: 600;
+		color: #111111;
+		cursor: pointer;
+		box-shadow: 0 0 5px greenyellow;
+		transition: all .3s;
+	}
+	.link-button:hover {
+		transform: translateY(-5px);
+		background: #72ac1b;
+	}
+	a {
+		text-decoration: none;
+		color: greenyellow;
+	}
+	@media screen and (max-width: 700px) {
+		iframe {
+			width: 100%;
+			
+		}
+	}
+</style>

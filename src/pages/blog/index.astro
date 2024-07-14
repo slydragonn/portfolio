@@ -1,0 +1,108 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Badge from '../../components/Badge.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 100%;
+			}
+			h1 {
+				text-align: center;
+        		margin-top: 40px;
+        		margin-bottom: 150px;
+			}
+			.blog-list {
+				display: flex;
+				flex-direction: column;
+				list-style: none;
+			}
+			.blog-list > li {
+				padding: 40px 0;
+				border-top: 1px solid #272727;
+				border-bottom: 1px solid #272727;
+			}
+			.blog-list > li > a {
+				display: flex;
+				text-decoration: none;
+				gap: 40px;
+				color: white;
+				transition: all .2s;
+			}
+			.blog-list > li > a:hover {
+				color: greenyellow;
+			}
+			.blog-list > li > a > div > h4 {
+				font-weight: 500;
+				font-size: 32px
+			}
+			.blog-list > li > a > div > p {
+				color: gray;
+			}
+			.social-networks {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				padding: 40px 0;
+				border-top: 1px solid #272727;
+			}
+
+			@media screen and (max-width: 450px) {
+				.blog-list > li > a {
+				display: flex;
+				flex-direction: column
+				}
+				.blog-list > li > a > img {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>All Posts</h1>
+			<section class="social-networks">
+				<h2>External Posts</h2>
+				<div>
+					<Badge>Dev.to</Badge> <a href="https://dev.to/slydragonn" target="_blank">https://dev.to/slydragonn</a>
+				</div>
+				<div>
+					<Badge>Youtube</Badge> <a href="youtube.com/@slydragonn" target="_blank">youtube.com/@slydragonn</a>
+				</div>
+			</section>
+			<section>
+				<ul class="blog-list">
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.slug}/`}>
+									<div>
+										<h4 class="title">{post.data.title}</h4>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+									</div>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

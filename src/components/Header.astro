@@ -1,0 +1,117 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import MenuIcon from './icons/MenuIcon.astro';
+---
+
+<header>
+	<nav>
+		<h2><a href="/">/@slydragonn</a></h2>
+		<div class="header-links">
+			<HeaderLink href="/projects">projects</HeaderLink>
+			<HeaderLink href="/blog">blog</HeaderLink>
+			<HeaderLink href="/about">about</HeaderLink>
+		</div>
+		<div class="menu">
+			<button class="menu-button" id="menu-button"><MenuIcon /></button>
+			<ul class="menu-list" id="menu-list">
+				<li><a href="/projects">projects</a></li>
+				<li><a href="/blog">blog</a></li>
+				<li><a href="/about">about</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<script>
+	const menuButton = document.getElementById('menu-button')
+	const menuList = document.getElementById('menu-list')
+
+	class MenuListDisplay {
+	display: string;
+		constructor(display:string) {
+			this.display = display
+		}
+
+		changeDisplay() {
+			return this.display == 'none' ? this.display = 'flex' : this.display = 'none' 
+		}
+	}
+
+	const displayState = new MenuListDisplay('none')
+
+	menuButton?.addEventListener('click', () => {
+		displayState.changeDisplay()
+
+		if(menuList) menuList.style.display = displayState.display
+
+		console.log(displayState.display)
+	})
+</script>
+
+<style>
+	header {
+		margin: 0;
+		padding: 0;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 10px 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: greenyellow;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	@media screen and (max-width: 720px) {
+		header {
+			padding: 10px 0;
+		}
+		.header-links {
+			display: none;
+		}
+		.menu {
+			position: relative;
+			display: block;
+		}
+		.menu-button {
+			background: transparent;
+			border: none;
+			outline: none;
+			color: white;
+		}
+		.menu-list {
+			z-index: 100;
+			position: absolute;
+			top: 30px;
+			right: 0px;
+			display: none;
+			flex-direction: column;
+			list-style: none;
+			gap: 20px;
+			background: #111111;
+			padding: 20px 40px;
+			border: 1px solid #1b1b1b;
+			border-radius: 20px;
+		}
+	}
+</style>

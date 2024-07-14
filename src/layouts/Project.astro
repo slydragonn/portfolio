@@ -1,0 +1,72 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'projects'>['data'];
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style is:global>
+			main {
+				width: 100%;
+				margin: 0;
+                text-align: justify;
+			}
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: #d8d8d8;
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+			}
+			.title h2 {
+				margin: 0 0 0.5em 0;
+				color: white;
+                font-size: 22px;
+                font-weight: 600;
+			}
+            .title > h2 > a {
+                color: greenyellow;
+                text-decoration: none;
+            }
+			.date {
+				margin-bottom: 0.5em;
+				color: gray;
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				margin: 50px 0 15px 0;
+			}
+			p, img, li {
+				margin: 15px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="prose">
+					<div class="title">
+						<h2><a href="/projects">Projects</a> / {title}</h2>
+					</div>
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

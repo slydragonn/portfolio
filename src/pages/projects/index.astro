@@ -1,0 +1,53 @@
+---
+import MainLayout from "../../layouts/Main.astro"
+import Card from "../../components/Card.astro"
+import CardLayout from '../../layouts/CardLayout.astro'
+---
+
+<MainLayout>
+    <main>
+        <h1>All Projects</h1>
+        <CardLayout title="/ Products" showSeeAll={false} alignCards="center">
+			<Card 
+				title='Nebula | Notion Template'
+				imgUrl='/icons/notion.svg'
+				description='Notion Template for Content Creators'
+				url={{
+         		   more: '/projects/nebula',
+					visit: 'https://slydragonn.gumroad.com/l/nebula'
+				}}
+			/>
+		</CardLayout> 
+        <CardLayout title="/ Setups" showSeeAll={false} alignCards="center">
+			<Card 
+					title='Neovim Setup | Lazy.vim'
+					imgUrl='/icons/lazyvim.svg'
+					description='Ultimate Setup with lazy.nvim for Fullstack Developers'
+					url={{
+            			more: '/projects/neovim-lazy',
+            			visit: 'https://github.com/slydragonn/nvim-lazy'
+					}}
+				/>
+				<Card 
+					title='Neovim Setup | Packer'
+					imgUrl='/icons/neovim.svg'
+					description='Neovim Setup with Packer for Windows and Linux'
+					url={{
+						more: '/projects/neovim-packer',
+						visit: 'https://github.com/slydragonn/dotfiles'
+					}}
+				/>
+		</CardLayout>
+    </main>
+</MainLayout>
+
+<style>
+    main {
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 150px;
+    }
+</style>

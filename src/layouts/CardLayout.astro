@@ -1,0 +1,58 @@
+---
+import ArrowTopRight from '../components/icons/ArrowTopRight.astro'
+
+interface Props {
+	title: string;
+	showSeeAll: boolean;
+    alignCards: string;
+}
+
+const { title, showSeeAll, alignCards } = Astro.props;
+---
+
+<section class="cards-section">
+    <div class="cards-header">
+        <h3>
+            {title}
+        </h3>
+        {
+            showSeeAll
+            ? <a href="/projects">See All <ArrowTopRight /></a>
+            : undefined
+        }
+    </div>
+    <div class="cards-list">
+        <slot />
+    </div>
+</section>
+
+<style define:vars={{ alignCards }}>
+    .cards-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .cards-header > a {
+        text-decoration: none;
+        color: white;
+        text-wrap: nowrap;
+    }
+    .cards-list {
+		display: flex;
+		justify-content: var(--alignCards);
+        align-items: center;
+        flex-wrap: wrap;
+		width: 100%;
+		margin: 50px 0;
+        gap: 12px;
+	}
+    @media screen and (max-width: 1030px) {
+        .cards-list {
+            justify-content: center;
+            gap: 40px;
+        }
+        .cards-header > h3 {
+            font-size: 20px;
+        }
+    }
+</style>

@@ -1,0 +1,90 @@
+---
+import ArrowTopRight from './icons/ArrowTopRight.astro';
+
+interface Props {
+	title: string;
+    imgUrl: string;
+	description: string;
+	url: {
+        more: string,
+        visit: string
+    };
+}
+
+const { title, imgUrl, description, url } = Astro.props;
+---
+
+<article class="card">
+    <div class="card-header">
+        <img class="card-icon" src={imgUrl} alt="slydragonn project icon"/>
+        <h2 class="card-title">{title}</h2>
+    </div> 
+    <p class="card-desc">{description}</p>
+    <div class="card-links">
+        <a class="more-link" href={url.more}>More</a>
+        <a class="visit-link" href={url.visit} target="_blank">Visit <ArrowTopRight /></a>
+    </div>
+</article>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 250px;
+        height: 150px;
+        padding: 20px;
+        background: #111111;
+        border-radius: 20px;
+        border: 1px solid #1b1b1b;
+    }
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .card-icon {
+      width: 20px;
+      height: auto;
+      object-fit: cover;
+    }
+    .card-title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .card-desc {
+        font-size: 16px;
+        color: gray;
+    }
+    .card-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid #272727;
+        padding-top: 10px;
+    }
+    .card-links > .more-link {
+        font-size: 16px;
+        color: white;
+        transition: all .3s;
+    }
+    .card-links > .more-link:hover {
+        color: greenyellow;
+    }
+    .card-links > .visit-link {
+        text-decoration: none;
+        background: white;
+        border-radius: 9999px;
+        padding: 5px 10px;
+        color: #111111;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all .3s;
+    }
+    .card-links > .visit-link:hover {
+        background: greenyellow;
+        box-shadow: 0 0 10px greenyellow;
+        transform: scale(1.05);
+    }
+</style>
