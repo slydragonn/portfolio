@@ -1,0 +1,39 @@
+---
+import Link from "./Link.astro"
+
+interface LinkObject {
+    title: string;
+    body: string;
+    href: string;
+}
+
+interface Props {
+    data: LinkObject[];
+}
+
+const { data } = Astro.props;
+---
+
+<div class="social-networks">
+    {
+        data
+        ? data.map(el => (
+            <Link
+                title={el.title}
+                body={el.body}
+                href={el.href}
+            />
+        ))
+        : undefined
+    }
+</div>
+
+<style>
+    .social-networks {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		flex-wrap: wrap;
+		max-width: 100%;
+	}
+</style>

@@ -1,0 +1,70 @@
+---
+import SocialNetworks from "../components/SocialNetworks.astro";
+import Layout from "../layouts/Layout.astro";
+import MainContainer from "../layouts/MainContainer.astro"
+import Card from "../components/Card.astro";
+import Title from "../components/Title.astro";
+import SOCIAL_NETWORKS from "../constants/social-networks";
+---
+
+<Layout title="Posts | Alejandro's Portfolio">
+    <MainContainer>
+        <SocialNetworks
+            data={SOCIAL_NETWORKS}
+        />
+        <section>
+            <Title value="Popular Posts" />
+            <div class="card-container">
+                <Card
+                    title="Ultimate Neovim Setup Guide: lazy.nvim Plugin Manager"
+                    img='/post-lazy.jpg'
+                    alt='hello'
+                    href='https://dev.to/slydragonn/ultimate-neovim-setup-guide-lazynvim-plugin-manager-23b7'
+                    size='md'
+                />
+                <Card
+                    title="How to Set up Neovim for Windows and Linux with Lua and Packer"
+                    img='/neovim.jpg'
+                    alt='hello'
+                    href='https://dev.to/slydragonn/how-to-set-up-neovim-for-windows-and-linux-with-lua-and-packer-2391'
+                    size='md'
+                />
+                <Card
+                    title="How to Set up the Windows terminal with Powershell and Oh My Posh"
+                    img='/post-powershell.jpg'
+                    alt='hello'
+                    href='https://dev.to/slydragonn/how-to-set-up-the-windows-terminal-with-powershell-and-oh-my-posh-2ba4'
+                    size='md'
+                />
+            </div>
+        </section>
+        <section>
+            <Title value="Channels" />
+            <div class="card-container">
+                <Card
+                    title="Dev.to"
+                    img='/devto.jpg'
+                    alt='hello'
+                    href='https://dev.to/slydragonn'
+                    size='lg'
+                />
+                <Card
+                    title="Youtube"
+                    img='/youtube.jpg'
+                    alt='hello'
+                    href='https://www.youtube.com/@slydragonn'
+                    size='lg'
+                />
+            </div>
+        </section>
+    </MainContainer>
+</Layout>
+
+<style>
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+</style>

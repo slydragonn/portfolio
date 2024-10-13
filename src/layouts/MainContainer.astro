@@ -1,0 +1,30 @@
+<main class="main-container">
+    <slot />
+</main>
+
+<style>
+    .main-container {
+        display: flex;
+		flex-direction: column;
+		gap: 80px;
+		margin: 0 auto;
+		padding: 40px 20px;
+		width: 800px;
+		max-width: calc(100% - 40px);
+		animation-name: show;
+		animation-duration: 1s;
+		animation-delay: .3s;
+		animation-fill-mode: both;
+    }
+
+	@keyframes show {
+		from {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>

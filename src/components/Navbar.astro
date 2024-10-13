@@ -1,0 +1,37 @@
+---
+import COLORS from "../constants/colors"
+---
+
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/works">Works</a></li>
+        <li><a href="/posts">Posts</a></li>
+    </ul>
+</nav>
+
+<style define:vars={{white: COLORS.white, black: COLORS.black}}>
+    nav > ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    nav > ul > li {
+        border: 1px solid #b6b6b6;
+        padding: 5px;
+        border-radius: 3px;
+        transition: all .3s;
+    }
+    nav > ul > li:hover {
+        background-color: var(--black);
+        transform: scale(1.2) translateY(-5px);
+    }
+    nav > ul > li > a {
+        text-decoration: none;
+        color: var(--black);
+        transition: all .3s;
+    }
+    nav > ul > li:hover > a {
+        color: var(--white);
+    }
+</style>

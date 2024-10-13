@@ -1,0 +1,54 @@
+---
+import COLORS from '../constants/colors.ts'
+import { Image } from 'astro:assets';
+
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="avatar">
+    <Image src={href} alt="profile image" width={120} height={120}/>
+    <div>
+        <h1>{title}</h1>
+        <span>{body}</span>
+    </div>
+</div>
+
+<style define:vars={{white: COLORS.white, black: COLORS.black}}>
+    .avatar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 140px;
+    }
+
+    .avatar > img {
+        position: absolute;
+        left: 0;
+        top: -60px;
+        width: 120px;
+        height: 120px;
+        border-radius: 9999px;
+        border: 4px solid var(--white);
+        object-fit: cover;
+    }
+    .avatar > div > h1 {
+        color: var(--black);
+        font-size: 28px;
+    }
+    .avatar > div > span {
+        color: var(--black);
+        font-weight: 100;
+        font-size: 15px;
+    }
+    @media screen and (max-width: 580px) {
+		.avatar > div > h1 {
+            font-size: 18px;
+        }
+	}
+</style>

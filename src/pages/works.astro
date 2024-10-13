@@ -1,0 +1,56 @@
+---
+import SocialNetworks from "../components/SocialNetworks.astro";
+import Layout from "../layouts/Layout.astro";
+import MainContainer from "../layouts/MainContainer.astro"
+import Card from "../components/Card.astro";
+import Title from "../components/Title.astro";
+import SOCIAL_NETWORKS from "../constants/social-networks";
+---
+
+<Layout title="Works | Alejandro's Portfolio">
+    <MainContainer>
+        <SocialNetworks
+            data={SOCIAL_NETWORKS}
+        />
+        <section>
+            <Title value="Popular Projects" />
+            <div class="card-container">
+                <Card
+                    title="Neovim Setup with Packer"
+                    img='/neovim.jpg'
+                    alt='Neovim setup'
+                    href='/projects/neovim-packer'
+                    size='md'
+                />
+                <Card
+                    title="Ultimate Neovim Setup with lazy.nvim"
+                    img='/lazy.jpg'
+                    alt='hello'
+                    href='/projects/neovim-lazy'
+                    size='md'
+                />
+            </div>
+        </section>
+        <section>
+            <Title value="Recent Projects" />
+            <div class="card-container">
+                <Card
+                    title="Blue River"
+                    img='/blueriver.jpg'
+                    alt='Blue River'
+                    href='/projects/blue-river'
+                    size='md'
+                />
+            </div>
+        </section>
+    </MainContainer>
+</Layout>
+
+<style>
+    .card-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+</style>

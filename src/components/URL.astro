@@ -1,0 +1,24 @@
+---
+import COLORS from '../constants/colors';
+
+interface Props {
+    text: string;
+    href: string;
+}
+
+const { text, href } = Astro.props;
+---
+
+<a class="url" href={href}>
+    {text}
+</a>
+
+<style define:vars={{green: COLORS.green}}>
+    .url {
+        color: blueviolet;
+        transition: color .2s;
+    }
+    .url:hover {
+        color: var(--green);
+    }
+</style>

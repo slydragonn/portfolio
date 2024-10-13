@@ -1,0 +1,61 @@
+---
+import PROJECTS from "../../content/projects";
+import SocialNetworks from "../../components/SocialNetworks.astro";
+import Layout from "../../layouts/Layout.astro";
+import MainContainer from "../../layouts/MainContainer.astro"
+import Title from "../../components/Title.astro";
+import ProjectFeature from "../../components/ProjectFeature.astro";
+import URL from "../../components/URL.astro";
+import { Image } from "astro:assets";
+import SOCIAL_NETWORKS from "../../constants/social-networks";
+
+export function getStaticPaths() {
+    return [
+        {params: {projectId: 'neovim-packer'}},
+        {params: {projectId: 'neovim-lazy'}},
+        {params: {projectId: 'blue-river'}}
+    ];
+}
+
+const { projectId } = Astro.params;
+const project = PROJECTS.find(project => project.slug === projectId);
+if (!project) return Astro.redirect("/404");
+---
+
+<Layout title={`${project.title} | Alejandro's Portfolio`}>
+    <MainContainer>
+        <SocialNetworks
+            data={SOCIAL_NETWORKS}
+        />
+        <section>
+            <Title value={project.title} />
+            <p>{project.description}</p>
+            {
+                project.projectFeatures.map(feature => {
+                    if(feature.isURL) {
+                        return <ProjectFeature title={feature.title}>
+                                    <URL
+                                        text={feature.text}
+                                        href={feature.href ?? "#"}
+                                    />
+                                </ProjectFeature>
+                    }
+                    else {
+                        return <ProjectFeature title={feature.title}>{feature.text}</ProjectFeature>
+                    }
+                })
+            }
+            <Image src={project.image} alt="Alejandro's Project - Slydragonn" width={400} height={200} />
+        </section>
+    </MainContainer>
+</Layout>
+
+<style>
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+</style>

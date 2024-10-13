@@ -1,0 +1,35 @@
+---
+import COLORS from '../constants/colors';
+
+interface Props {
+    title: string;
+    body: string;
+    href: string;
+}
+
+const { title, body, href } = Astro.props
+---
+
+<div class="link">
+    <span>{title}</span>
+    <a href={href}>{body}</a>
+</div>
+
+<style define:vars={{black: COLORS.black, green: COLORS.green}}>
+    .link {
+        display: flex;
+        flex-direction: column;
+    }
+    .link > span {
+        font-size: 13px;
+    }
+    .link > a {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: 600;
+        transition: all .2s;
+    }
+    .link:hover > a {
+        color: var(--green);
+    }
+</style>
