@@ -1,0 +1,112 @@
+---
+import COLORS from '../constants/colors';
+
+interface Props {
+    title: string;
+    description: string;
+    language: string;
+    stars: number;
+    forks: number;
+    href: string;
+}
+
+const { title, description, language, stars, forks, href } = Astro.props;
+---
+<a href={href} class="link-github">
+    <article class="github-card">
+        <div class="header">
+            <h3>{title}</h3>
+            <span class="public-tag">Public</span>
+            <svg  class="external" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-external-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg>
+        </div>
+        <p class="description">{description}</p>
+        <div class="stats">
+            <div class="language">
+                <span id="circle"></span>
+                <p>{language}</p>
+            </div>
+            <div class="stars">
+                <svg  class="star-icon" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-star"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+                <p>{stars}</p>
+            </div>
+            <div class="forks">
+                <svg  class="fork-icon" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-git-branch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M7 8l0 8" /><path d="M9 18h6a2 2 0 0 0 2 -2v-5" /><path d="M14 14l3 -3l3 3" /></svg>
+                <p>{forks}</p>
+            </div>
+        </div>
+    </article>
+</a>
+
+
+<style define:vars={{green: COLORS.green}}>
+    .link-github {
+        text-decoration: none;
+    }
+    .github-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 400px;
+        max-width: calc(100% - 40px);
+        height: 80px;
+        padding: 20px 25px;
+        margin: 20px 0;
+        border: 1px solid #d6d6d6;
+        border-radius: 5px;
+    }
+    .github-card > .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .github-card > .header > h3 {
+        color: #2c52fd;
+        font-size: 16px;
+    }
+    .github-card > .header > .public-tag {
+        color: gray;
+        font-size: 13px;
+        border: 1px solid #d6d6d6;
+        padding: 3px 6px;
+        border-radius: 9999px;
+    }
+    .github-card > .header > .external {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        width: 20px;
+        color: #555555;
+    }
+    .github-card > .description {
+        font-size: 14px;
+        color: #555555;
+    }
+    .github-card > .stats {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: #555555;
+        font-size: 14px;
+    }
+    #circle {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: var(--green);
+        border-radius: 9999px;
+    }
+    .github-card > .stats > .language, .stars, .forks {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .github-card > .stats > .stars > .star-icon {
+        width: 20px;
+        color: #555555;
+    }
+    .github-card > .stats > .forks > .fork-icon {
+        width: 20px;
+        color: #555555;
+    }
+</style>

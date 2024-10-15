@@ -8,11 +8,13 @@ import ProjectFeature from "../../components/ProjectFeature.astro";
 import URL from "../../components/URL.astro";
 import { Image } from "astro:assets";
 import SOCIAL_NETWORKS from "../../constants/social-networks";
+import GithubCard from "../../components/GithubCard.astro";
+import List from "../../components/List.astro";
+import { type Feature, type GithubCardObject } from '../../types/content'
 
 export function getStaticPaths() {
     return [
-        {params: {projectId: 'neovim-packer'}},
-        {params: {projectId: 'neovim-lazy'}},
+        {params: {projectId: 'neovim-setup'}},
         {params: {projectId: 'blue-river'}}
     ];
 }
@@ -27,25 +29,59 @@ if (!project) return Astro.redirect("/404");
         <SocialNetworks
             data={SOCIAL_NETWORKS}
         />
-        <section>
-            <Title value={project.title} />
-            <p>{project.description}</p>
+        <section class="content-contain">
+            <Title value={project.title} type="h1"/>
             {
-                project.projectFeatures.map(feature => {
-                    if(feature.isURL) {
-                        return <ProjectFeature title={feature.title}>
-                                    <URL
-                                        text={feature.text}
-                                        href={feature.href ?? "#"}
-                                    />
-                                </ProjectFeature>
+                project.content?.map(el => {
+                    if(el.type === "title") {
+                        return <Title value={el.value as string} type="h2"/>
                     }
-                    else {
-                        return <ProjectFeature title={feature.title}>{feature.text}</ProjectFeature>
+                    else if (el.type === "text") {
+                        return <p style="margin-bottom: 20px;">{el.value}</p>
+                    }
+                    else if (el.type === "image") {
+                        return <Image src={el.value as string} alt="Alejandro's Project - Slydragonn" width={400} height={200} />
+                    }
+                    else if (el.type === "list") {
+                        return <List content={el.value as Array<string>}/>
+                    }
+                    else if (el.type === "github") {
+                        const githubCardValues: GithubCardObject = el.value as GithubCardObject
+                        return (
+                            <GithubCard
+                                title={githubCardValues.title}
+                                description={githubCardValues.description}
+                                language={githubCardValues.language}
+                                stars={githubCardValues.stars}
+                                forks={githubCardValues.forks}
+                                href={githubCardValues.href}
+                            />
+                        )
+                    }
+                    else if (el.type === "features") {
+                        const features = el.value as Feature[]
+                        return (
+                            <div style="margin: 20px 0;">
+                            {
+                                features.map((feature: Feature) => {
+                                    if(feature.isURL) {
+                                        return <ProjectFeature title={feature.title}>
+                                                    <URL
+                                                        text={feature.text}
+                                                        href={feature.href ?? "#"}
+                                                    />
+                                                </ProjectFeature>
+                                    }
+                                    else {
+                                        return <ProjectFeature title={feature.title}>{feature.text}</ProjectFeature>
+                                    }
+                                })
+                            }
+                            </div>
+                        )
                     }
                 })
             }
-            <Image src={project.image} alt="Alejandro's Project - Slydragonn" width={400} height={200} />
         </section>
     </MainContainer>
 </Layout>

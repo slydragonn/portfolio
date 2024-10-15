@@ -1,0 +1,23 @@
+---
+interface Props {
+    content: Array<string>;
+}
+
+const { content } = Astro.props;
+---
+
+<ul class="list">
+    {
+        content.map(el => <li>{el}</li>)
+    }
+</ul>
+
+<style>
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: circle;
+        margin-bottom: 20px;
+    }
+</style>

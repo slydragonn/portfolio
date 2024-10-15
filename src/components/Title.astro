@@ -1,18 +1,23 @@
 ---
 interface Props {
     value: string;
+    type: "h1" | "h2"
 }
 
-const { value } = Astro.props;
+const { value, type } = Astro.props;
+
+const fontSize = type === "h1" ? "24px" : "18px"
 ---
 
-<h2 class="title">
-    {value}
-</h2>
+{
+    type === "h1"
+        ? <h1 class="title">{value}</h1>
+        : <h2 class="title">{value}</h2>
+}
 
-<style>
+<style define:vars={{fontSize}}>
     .title {
-        font-size: 18px;
+        font-size: var(--fontSize);
 		margin-bottom: 20px;
     }
 </style>
