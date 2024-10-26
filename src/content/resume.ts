@@ -1,4 +1,4 @@
-export const PROFILE = "Alejandro is a Software Developer focused on developing solutions with Python and JavaScript with a strong passion for innovation, sustainable development and ecology. He is currently studying Computer Engineering and learning about new technologies and industry practices."
+export const PROFILE = "Alejandro is a Software Developer focused on developing solutions with Python and JavaScript with a strong passion for innovation, sustainable development and ecology. He is currently studying Computer Engineering and working on projects with new technologies and industry practices."
 
 export const BIO = [
     {

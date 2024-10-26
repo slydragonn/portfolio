@@ -136,7 +136,7 @@ const PROJECTS: ProjectsContent = [
                     {
                         isURL: false,
                         title: "Stack",
-                        text: "Next.js, TypeScript, Firebase"
+                        text: "Astro, React, TypeScript, Python, Django"
                     },
                     {
                         isURL: false,
@@ -162,6 +162,86 @@ const PROJECTS: ProjectsContent = [
             {
                 type: "image",
                 value: "/blueriver.jpg"
+            }
+        ],
+    },
+    {
+        slug: "my-portfolio",
+        title: "My portfolio",
+        content: [
+            {
+                type: "features",
+                value: [
+                    {
+                        isURL: false,
+                        title: "Platform",
+                        text: "All/Web"
+                    },
+                    {
+                        isURL: false,
+                        title: "Stack",
+                        text: "Astro, Typescript, HTML, & CSS"
+                    },
+                    {
+                        isURL: true,
+                        title: "Website",
+                        text: "Home",
+                        href: "/"
+                    },
+                ]
+            },
+            {
+                type: "image",
+                value: "/portfolio.jpg"
+            }
+        ],
+    },
+    {
+        slug: "minimalist-dragon",
+        title: "Minimalist Portfolio Template",
+        content: [
+            {
+                type: "features",
+                value: [
+                    {
+                        isURL: false,
+                        title: "Platform",
+                        text: "All/Web"
+                    },
+                    {
+                        isURL: false,
+                        title: "Stack",
+                        text: "Astro, Typescript, HTML, & CSS"
+                    },
+                    {
+                        isURL: true,
+                        title: "Website",
+                        text: "Astro Themes",
+                        href: "https://astro.build/themes/details/minimalist-dragon/"
+                    },
+                    {
+                        isURL: true,
+                        title: "Github",
+                        text: "slydragonn/minimalist-dragon",
+                        href: "https://github.com/slydragonn/minimalist-dragon"
+                    },
+                ]
+            },
+            {
+                type: "title",
+                value: "Summary"
+            },
+            {
+                type: "text",
+                value: "minimalist-dragon is a free to use template for the Astro Themes repository."
+            },
+            {
+                type: "image",
+                value: "/minimalist-dragon.jpg"
+            },
+            {
+                type: "image",
+                value: "/min-dragon-2.jpg"
             }
         ],
     }
