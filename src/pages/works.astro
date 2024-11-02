@@ -13,40 +13,39 @@ import SOCIAL_NETWORKS from "../constants/social-networks";
             data={SOCIAL_NETWORKS}
         />
         <section>
-            <Title value="Popular Projects" type="h2"/>
+            <Title value="All Projects" type="h2"/>
             <div class="card-container">
                 <Card
                     title="Neovim Setups"
                     img='/neovim.jpg'
                     alt='Neovim setup'
                     href='/projects/neovim-setup'
-                    size='md'
+                    size='full'
+                    tech={["Lua", "VimScript", "Lazy.nvim", "Packer.nvim"]}
                 />
                 <Card
                     title="Blue River"
                     img='/blueriver.jpg'
                     alt='Blue River'
                     href='/projects/blue-river'
-                    size='md'
+                    size='lg'
+                    tech={["TypeScript", "Python", "Next.js", "Django"]}
                 />
-            </div>
-        </section>
-        <section>
-            <Title value="Recent Projects" type="h2"/>
-            <div class="card-container">
                 <Card
                     title="My Portfolio"
                     img='/portfolio.jpg'
                     alt='slydragonn portfolio'
                     href='/projects/my-portfolio'
-                    size='md'
+                    size='lg'
+                    tech={["TypeScript", "Astro"]}
                 />
                 <Card
                     title="Minimalist Portfolio Template"
                     img='/minimalist-dragon.jpg'
                     alt='Minimalist-dragon'
                     href='/projects/minimalist-dragon'
-                    size='md'
+                    size='full'
+                    tech={["JavaScript", "Astro"]}
                 />
             </div>
         </section>
@@ -56,8 +55,8 @@ import SOCIAL_NETWORKS from "../constants/social-networks";
 <style>
     .card-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 50px;
     }
 </style>

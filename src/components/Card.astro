@@ -7,18 +7,45 @@ interface Props {
     img: string;
     alt?: string;
     href: string;
-    size?: 'lg' | 'md'
+    size: 'lg' | 'md' | 'full'
+    tech?: string[]
 }
 
-const { title, img, alt, href, size } = Astro.props
+const { title, img, alt, href, size, tech } = Astro.props
 
-const width = size == 'lg' ? '350px' : '230px';
-const height = size == 'lg' ? '225px' : '150px'
+type Size = {
+    width: string,
+    height: string
+}
+
+function getSize(type: "md" | "lg" | "full"): Size {
+    const sizeType = {
+        "md": {
+            width: "230px",
+            height: "150px"
+        },
+        "lg": {
+            width: "350px",
+            height: "225px"
+        },
+        "full": {
+            width: "100%",
+            height: "auto"
+        }
+    }
+    return sizeType[type]
+}
+
+const width = getSize(size).width;
+const height = getSize(size).height;
 ---
 
 <a href={href} class="card">
     <Image src={img} alt={alt ?? "Project Card"} width={250} height={200}/>
     <h3>{title}</h3>
+    {
+        tech && <ul class="tech-list">{tech.map(el => <li class="tech-item">{"#" + el}</li>)}</ul>
+    }
 </a>
 
 <style define:vars={{width, height, green: COLORS.green}}>
@@ -51,7 +78,19 @@ const height = size == 'lg' ? '225px' : '150px'
     .card:hover > h3 {
         color: var(--green);
     }
-    @media screen and (max-width: 600px) {
+    .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        gap: 15px;
+        color: #4b4b4b;
+    }
+    .tech-item {
+        font-size: small;
+        text-align: center;
+    }
+    @media screen and (max-width: 850px) {
 		.card {
             width: 100%;
         }

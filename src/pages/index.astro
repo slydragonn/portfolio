@@ -6,8 +6,7 @@ import Timeline from '../components/Timeline.astro';
 import Card from '../components/Card.astro';
 import Tag from '../components/Tag.astro';
 import Title from '../components/Title.astro';
-import { PROFILE } from '../content/resume';
-import { BIO } from '../content/resume';
+import { PROFILE, BIO, SKILLS } from '../content/resume';
 ---
 
 <Layout title="Welcome to Alejandro's Portfolio">
@@ -41,23 +40,31 @@ import { BIO } from '../content/resume';
 			</div>
 		</section>
 		<section class="tags-container">
-			<Tag title='Python' bg='#3d4df5' color='white'/>
-			<Tag title='Django' bg='#6bf53d' />
-			<Tag title='Pandas' bg='#3df5b8' />
-			<Tag title='Numpy' bg='#ae3df5' color='white'/>
-			<Tag title='Unittest' bg='#3d87f5' color='white'/>
-			<Tag title='POO' bg='#f5563d' color='white'/>
-			<Tag title='JavaScript' bg='#f5d63d'/>
-			<Tag title='HTML' bg='#f5463d' color='white'/>
-			<Tag title='CSS' bg='#3d96f5' color='white'/>
-			<Tag title='TypeScript' bg='#3d46f5' color='white'/>
-			<Tag title='Next.js' bg='black' color='white'/>
-			<Tag title='Linux' bg='#f53dd6' color='white'/>
-			<Tag title='SQL' bg='#4cf53d'/>
-			<Tag title='C/C++' bg='#3df5e9' color='black'/>
-			<Tag title='Git' bg='#f5873d'/>
-			<Tag title='Lua' bg='#7a3df5' color='white'/>
+			{
+				SKILLS.map(skill => <Tag title={skill} />)
+			}
 		</section>
+		<section>
+            <Title value="Popular Projects" type="h2"/>
+            <div class="card-container">
+                <Card
+                    title="Neovim Setups"
+                    img='/neovim.jpg'
+                    alt='Neovim setup'
+                    href='/projects/neovim-setup'
+                    size='lg'
+					tech={["Lua", "VimScript", "Lazy.nvim", "Packer.nvim"]}
+                />
+                <Card
+                    title="Blue River"
+                    img='/blueriver.jpg'
+                    alt='Blue River'
+                    href='/projects/blue-river'
+                    size='lg'
+					tech={["TypeScript", "Python", "Next.js", "Django"]}
+                />
+            </div>
+        </section>
 		<Timeline
 			title='Bio'
 			data={BIO}
@@ -111,6 +118,12 @@ import { BIO } from '../content/resume';
 		justify-content: space-between;
 		gap: 20px;
 	}
+	.card-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 	@media screen and (max-width: 790px) {
 		.about-container {
 			flex-direction: column;

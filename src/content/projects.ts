@@ -190,10 +190,6 @@ const PROJECTS: ProjectsContent = [
                     },
                 ]
             },
-            {
-                type: "image",
-                value: "/portfolio.jpg"
-            }
         ],
     },
     {

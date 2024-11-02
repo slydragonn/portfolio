@@ -22,3 +22,21 @@ export const BIO = [
         body: "I started studying Computer Engineering at the JIC Polytechnic."
     },
 ]
+
+export const SKILLS = [
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Lua",
+    "SQL",
+    "Django",
+    "Next.js",
+    "Astro",
+    "HTML",
+    "CSS",
+    "Pandas",
+    "Numpy",
+    "Linux",
+    "Git",
+    "POO"
+]
