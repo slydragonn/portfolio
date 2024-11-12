@@ -122,77 +122,6 @@ const PROJECTS: ProjectsContent = [
         ],
     },
     {
-        slug: "blue-river",
-        title: "Blue River",
-        content: [
-            {
-                type: "features",
-                value: [
-                    {
-                        isURL: false,
-                        title: "Platform",
-                        text: "All/Web"
-                    },
-                    {
-                        isURL: false,
-                        title: "Stack",
-                        text: "Astro, React, TypeScript, Python, Django"
-                    },
-                    {
-                        isURL: false,
-                        title: "State",
-                        text: "In development"
-                    },
-                    {
-                        isURL: true,
-                        title: "Website",
-                        text: "Landing Page",
-                        href: "https://blue-river.vercel.app/"
-                    },
-                ]
-            },
-            {
-                type: "title",
-                value: "Summary"
-            },
-            {
-                type: "text",
-                value: "Blue River is a platform for suppliers and buyers of eco-friendly products and services. It provides a repository of suppliers to a market focused on consumption based on being environmentally friendly."
-            },
-            {
-                type: "image",
-                value: "/blueriver.jpg"
-            }
-        ],
-    },
-    {
-        slug: "my-portfolio",
-        title: "My portfolio",
-        content: [
-            {
-                type: "features",
-                value: [
-                    {
-                        isURL: false,
-                        title: "Platform",
-                        text: "All/Web"
-                    },
-                    {
-                        isURL: false,
-                        title: "Stack",
-                        text: "Astro, Typescript, HTML, & CSS"
-                    },
-                    {
-                        isURL: true,
-                        title: "Website",
-                        text: "Home",
-                        href: "/"
-                    },
-                ]
-            },
-        ],
-    },
-    {
         slug: "minimalist-dragon",
         title: "Minimalist Portfolio Template",
         content: [
@@ -240,7 +169,7 @@ const PROJECTS: ProjectsContent = [
                 value: "/min-dragon-2.jpg"
             }
         ],
-    }
+    },
 ];
 
 export default PROJECTS

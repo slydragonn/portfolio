@@ -2,11 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import MainContainer from '../layouts/MainContainer.astro';
 import Link from '../components/Link.astro';
-import Timeline from '../components/Timeline.astro';
 import Card from '../components/Card.astro';
 import Tag from '../components/Tag.astro';
 import Title from '../components/Title.astro';
-import { PROFILE, BIO, SKILLS } from '../content/resume';
+import { PROFILE, SKILLS } from '../content/resume';
 ---
 
 <Layout title="Welcome to Alejandro's Portfolio">
@@ -39,13 +38,16 @@ import { PROFILE, BIO, SKILLS } from '../content/resume';
 				/>
 			</div>
 		</section>
-		<section class="tags-container">
-			{
-				SKILLS.map(skill => <Tag title={skill} />)
-			}
+		<section>
+			<Title value="Technologies" type="h2"/>
+			<section class="tags-container">
+				{
+					SKILLS.map(skill => <Tag title={skill} />)
+				}
+			</section>
 		</section>
 		<section>
-            <Title value="Popular Projects" type="h2"/>
+            <Title value="Projects" type="h2"/>
             <div class="card-container">
                 <Card
                     title="Neovim Setups"
@@ -56,21 +58,18 @@ import { PROFILE, BIO, SKILLS } from '../content/resume';
 					tech={["Lua", "VimScript", "Lazy.nvim", "Packer.nvim"]}
                 />
                 <Card
-                    title="Blue River"
-                    img='/blueriver.jpg'
-                    alt='Blue River'
-                    href='/projects/blue-river'
+                    title="MarkWriter"
+                    img='/markwriter.jpg'
+                    alt='Simple Markdown Editor'
+                    href='https://markwriter.vercel.app/'
                     size='lg'
-					tech={["TypeScript", "Python", "Next.js", "Django"]}
+                    tech={["TypeScript", "Next.js", "Codemirror", "ChakraUI"]}
                 />
             </div>
         </section>
-		<Timeline
-			title='Bio'
-			data={BIO}
-		/>
+		
 		<section class="recent-container">
-			<Title value='Fixed' type='h2'/>
+			<Title value='Blog' type='h2'/>
 			<div>
 				<Card
                     title="Ultimate Neovim Setup Guide: lazy.nvim Plugin Manager"

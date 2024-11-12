@@ -41,7 +41,7 @@ const height = getSize(size).height;
 ---
 
 <a href={href} class="card">
-    <Image src={img} alt={alt ?? "Project Card"} width={250} height={200}/>
+    <Image src={img} alt={alt ?? "Project Card"} width={250} height={200} />
     <h3>{title}</h3>
     {
         tech && <ul class="tech-list">{tech.map(el => <li class="tech-item">{"#" + el}</li>)}</ul>
@@ -63,6 +63,7 @@ const height = getSize(size).height;
         height: var(--height);
         border-radius: 5px;
         object-fit: cover;
+        border: 1px solid #d6d6d6;
     }
     .card > h3 {
         width: 90%;
